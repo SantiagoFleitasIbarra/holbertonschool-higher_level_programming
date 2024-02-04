@@ -1,53 +1,35 @@
 #IMPORT MODULE#
 >>> add_integer = __import__('0-add_integer').add_integer
 
-# Test Case 1: Adding positive numbers
-
 >>> add_integer(2, 3)
 5
-
-# Test Case 2: Adding negative numbers
 
 >>> add_integer(-5, -7)
 -12
 
-# Test Case 3: Adding mixed numbers
-
 >>> add_integer(10, -5)
 5
 
-# Test Case 5: Adding an integer and a float
-
 >>> add_integer(8, 3.2)
 11
-
-# Test Case 6: Adding an not define a
 
 >>> add_integer(a, 32)
 Traceback (most recent call last):
 ...
 NameError: name 'a' is not defined
 
-# Test Case 7: Adding an string
-
 >>> add_integer('xd', 12)
 Traceback (most recent call last):
 ...
 TypeError: a must be an integer
 
-# Test Case 8: Adding numbers floats
-
 >>> add_integer(3.21, 2.12)
 5
-
-# Test Case 9: Nothing parameters
 
 >>> add_integer()
 Traceback (most recent call last):
 ...
 TypeError: add_integer() missing 1 required positional argument: 'a'
-
-# Test Case 10: More than two parameters
 
 >>> add_integer(3, 3, 2)
 Traceback (most recent call last):
