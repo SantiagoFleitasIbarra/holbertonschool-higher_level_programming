@@ -4,12 +4,7 @@
 
 def text_indentation(text):
     """
-    Prints a text with 2 new lines after each '.', '?', and ':'
-
-    :param text: input text (string)
-    :type text: str
-
-    :return: None
+    prints a text with 2 new lines after each '.', '?', and ':'
     """
     if not isinstance(text, str):
         raise TypeError("text must be a string")
