@@ -1,8 +1,5 @@
 #!/usr/bin/python3
-"""
-this module returns the division
-of a matrix by an integer or a float
-"""
+"""this module returns the division of a matrix by an integer or a float"""
 
 
 def matrix_divided(matrix, div):
