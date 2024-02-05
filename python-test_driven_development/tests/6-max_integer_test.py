@@ -20,6 +20,10 @@ class TestMaxInteger(unittest.TestCase):
         result = max_integer([-1, -2, -3, -4, -5])
         self.assertEqual(result, -1)
 
+    def test_mixed_positive_and_negative_numbers(self):
+        result = max_integer([-1, 2, -3, 4, -5])
+        self.assertEqual(result, 4)
+
     def test_duplicate_numbers(self):
         result = max_integer([3, 3, 3, 3, 3])
         self.assertEqual(result, 3)
@@ -31,6 +35,10 @@ class TestMaxInteger(unittest.TestCase):
     def test_mixed_types(self):
         with self.assertRaises(TypeError):
             max_integer([1, 'two', 3, 4])
+
+    def test_single_element_list(self):
+        result = max_integer([42])
+        self.assertEqual(result, 42)
 
 if __name__ == '__main__':
     unittest.main()
