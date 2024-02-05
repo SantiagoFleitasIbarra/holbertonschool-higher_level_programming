@@ -45,7 +45,6 @@ class Rectangle:
     def __str__(self):
         if self.__height != 0 and self.__width != 0:
             symbol = "#"
-            return "\n".join([symbol * self.__width\
-                for _ in range(self.__height)])
+            return "\n".join([self.__width * symbol] * self.__height)
         else:
             return ""
