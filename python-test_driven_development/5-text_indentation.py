@@ -3,22 +3,26 @@
 
 
 def text_indentation(text):
-    """this defines it"""
+    """
+    Prints a text with 2 new lines after each '.', '?', and ':'
+
+    :param text: input text (string)
+    :type text: str
+
+    :return: None
+    """
     if not isinstance(text, str):
         raise TypeError("text must be a string")
 
-    sentences = []
-    current_sentence = ""
-
+    new_paragraph = True
     for char in text:
-        if char in ".?:":
-            sentences.append(current_sentence.strip() + char)
-            current_sentence = ""
+        if new_paragraph and char.isspace():
+            continue
+
+        print(char, end='')
+
+        if char in ['.', '?', ':']:
+            print('\n')
+            new_paragraph = True
         else:
-            current_sentence += char
-
-    if current_sentence:
-        sentences.append(current_sentence.strip())
-
-    for sentence in sentences:
-        print(sentence + "\n")
+            new_paragraph = False
