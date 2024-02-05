@@ -22,4 +22,3 @@ def text_indentation(text):
 
     for sentence in sentences:
         print(sentence + "\n")
-    print(sentence, end="")
