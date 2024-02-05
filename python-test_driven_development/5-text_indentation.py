@@ -7,14 +7,18 @@ def text_indentation(text):
     if not isinstance(text, str):
         raise TypeError("text must be a string")
 
-    char_trigger = [":", "?", "."]
-    current_line = ''
+    sentences = []
+    current_sentence = ""
 
     for char in text:
-        if char in char_trigger:
-            print(current_line.strip())
-            print()
-            current_line = ''
+        if char in ".?:":
+            sentences.append(current_sentence.strip() + char)
+            current_sentence = ""
         else:
-            current_line += char
-    print(current_line.strip(), end='')
+            current_sentence += char
+
+    if current_sentence:
+        sentences.append(current_sentence.strip())
+
+    for sentence in sentences:
+        print(sentence + "\n")
