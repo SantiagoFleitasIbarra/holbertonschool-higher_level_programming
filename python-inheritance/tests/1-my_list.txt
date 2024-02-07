@@ -1,16 +1,23 @@
 #IMPORT MODULE#
 >>> MyList = __import__('1-my_list').MyList
 
-# Case Test: 1
+>>> isinstance(MyList, list)
+False
+>>> issubclass(MyList, list)
+True
 
->>> my_list = MyList()
->>> my_list.append(6)
->>> print(my_list)
-[6]
+>>> list1 = MyList()
+>>> list1.append(3)
+>>> list1.append(6)
+>>> list1.append(2)
+>>> list1.append(5)
+>>> list1.append(1)
+>>> print(list1)
+[3, 6, 2, 5, 1]
 
-# Case Test: 2
+>>> list1.print_sorted()
+[1, 2, 3, 5, 6]
 
->>> my_list = MyList()
->>> my_list.sort()
->>> print(my_list)
+>>> list2 = MyList()
+>>> list2.print_sorted()
 []
