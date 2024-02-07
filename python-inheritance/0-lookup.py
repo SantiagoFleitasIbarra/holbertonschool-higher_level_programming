@@ -3,4 +3,5 @@
 
 
 def lookup(obj):
+    """this defines it"""
     return dir(obj)
