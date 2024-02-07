@@ -1,0 +1,16 @@
+#IMPORT MODULE#
+>>> MyList = __import__('1-my_list').MyList
+
+# Case Test: 1
+
+>>> my_list = MyList()
+>>> my_list.append(6)
+>>> print(my_list)
+[6]
+
+# Case Test: 2
+
+>>> my_list = MyList()
+>>> my_list.sort()
+>>> print(my_list)
+[]
