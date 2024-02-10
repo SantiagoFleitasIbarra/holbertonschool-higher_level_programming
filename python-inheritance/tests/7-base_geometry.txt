@@ -1,0 +1,87 @@
+#IMPORT MODULE#
+>>> BaseGeometry = __import__("7-base_geometry").BaseGeometry
+
+#
+
+>>> bg = BaseGeometry()
+
+#
+
+>>> bg.area()
+Traceback (most recent call last):
+...
+Exception: area() is not implemented
+
+#
+
+>>> bg.integer_validator("Aaron", 20)
+
+#
+
+>>> bg.integer_validator("Alicia", 0)
+Traceback (most recent call last):
+...
+ValueError: Alicia must be greater than 0
+
+#
+
+>>> bg.integer_validator("Carla", -10)
+Traceback (most recent call last):
+...
+ValueError: Carla must be greater than 0
+
+#
+
+>>> bg.integer_validator("1", None)
+Traceback (most recent call last):
+...
+TypeError: 1 must be an integer
+
+#
+
+>>> bg.integer_validator("Camila", 1e999)
+Traceback (most recent call last):
+...
+TypeError: Camila must be an integer
+
+#
+
+>>> bg.integer_validator("Nicolas", float("NaN"))
+Traceback (most recent call last):
+...
+TypeError: Nicolas must be an integer
+
+#
+
+>>> bg.integer_validator("2", [20, 19])
+Traceback (most recent call last):
+...
+TypeError: 2 must be an integer
+
+#
+
+>>> bg.integer_validator("3", (20, 19))
+Traceback (most recent call last):
+...
+TypeError: 3 must be an integer
+
+#
+
+>>> bg.integer_validator("4", "Brother")
+Traceback (most recent call last):
+...
+TypeError: 4 must be an integer
+
+#
+
+>>> bg.integer_validator("5", {"Brother":1})
+Traceback (most recent call last):
+...
+TypeError: 5 must be an integer
+
+#
+
+>>> bg.integer_validator("7", {19, 20})
+Traceback (most recent call last):
+...
+TypeError: 7 must be an integer
