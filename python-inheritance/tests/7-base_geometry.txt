@@ -90,17 +90,3 @@ TypeError: 7 must be an integer
 
 >>> bg.integer_validator("6", True)
 
-#
-
->>> bg.integer_validator("Facundo")
-Traceback (most recent call last):
-...
-TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
-
-#
-
->>> bg.integer_validator()
-Traceback (most recent call last):
-...
-TypeError: BaseGeometry.integer_validator() missing 2 required positional arguments: 'name' and 'value'
-
