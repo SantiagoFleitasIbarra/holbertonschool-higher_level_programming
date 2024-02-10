@@ -18,6 +18,27 @@ True
 >>> list1.print_sorted()
 [1, 2, 3, 5, 6]
 
+>>> list1.append(-2)
+>>> list1.append(-10)
+>>> list1.append(-5)
+
+>>> print(list1)
+[3, 6, 2, 5, 1, -2, -10, -5]
+
+>>> list1.print_sorted()
+[-10, -5, -2, 1, 2, 3, 5, 6]
+
 >>> list2 = MyList()
+>>> print(list2)
+[]
+
 >>> list2.print_sorted()
 []
+
+>>> list3 = MyList()
+>>> list3.append(20)
+>>> print(list3)
+[20]
+
+>>> list3.print_sorted()
+[20]
