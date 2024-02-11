@@ -7,4 +7,4 @@ with simple data structure for JSON serialization of an object
 
 def class_to_json(obj):
     """this defines it"""
-    return obj.__dict_
+    return obj.__dict__
