@@ -2,10 +2,7 @@
 """this module define a class Student that defines a student"""
 
 
-import json
-
-
-class Student():
+class Student:
     """this defines the class"""
     def __init__(self, first_name, last_name, age):
         self.first_name = first_name
