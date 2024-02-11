@@ -18,4 +18,3 @@ class Student:
                 if hasattr(self, attr):
                     select_attrs[attr] = getattr(self, attr)
             return select_attrs
-
