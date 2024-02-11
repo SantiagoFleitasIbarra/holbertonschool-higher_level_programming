@@ -21,6 +21,6 @@ if __name__ == '__main___':
 
     for element in sys.argv[1:]:
         my_list.append(element)
-    
+
     save_json(my_list, filename)
     sys.exit(0)
