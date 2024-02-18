@@ -7,6 +7,7 @@ from models.square import Square
 
 
 class TestSquare(unittest.TestCase):
+    """this define a class test"""
     def test_constructor(self):
         square = Square(5, 2, 3, 1)
         self.assertEqual(square.size, 5)

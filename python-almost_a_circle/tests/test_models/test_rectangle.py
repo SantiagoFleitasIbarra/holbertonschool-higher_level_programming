@@ -7,6 +7,7 @@ from models.rectangle import Rectangle
 
 
 class TestRectangle(unittest.TestCase):
+    """this define a class test"""
     def test_constructor(self):
         rect = Rectangle(5, 10, 2, 3, 1)
         self.assertEqual(rect.width, 5)

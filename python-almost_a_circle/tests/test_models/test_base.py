@@ -7,6 +7,7 @@ from models.base import Base
 
 
 class TestBase(unittest.TestCase):
+    """this define a class test"""
     def test_init(self):
         obj = Base()
         self.assertEqual(obj.id, 1)
